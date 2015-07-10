@@ -1,0 +1,11 @@
+﻿<div class="jumbotron">
+	<h1 class="text-center">Current Requests</h1>
+
+	<p>{{ message }}</p>
+	<input type="search" ng-model="q.$" placeholder="filter requests..." />
+	<ol class="idea-list">
+		<li class="idea-list-element list-group" ng-repeat="post in posts | filter:q">
+			<h4 class="">{{post.itemName}} - {{post.requestName}} <span class="remove-btn btn btn-default glyphicon glyphicon-remove" ng-click="remove(post)"></span></h4>
+		</li>
+	</ol>
+</div>
